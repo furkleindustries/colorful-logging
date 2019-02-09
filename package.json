@@ -1,5 +1,5 @@
 {
-  "name": "colorful-logs",
+  "name": "colorful-logging",
   "version": "1.0.0",
   "description": "A simple logging module with pleasing default colors and optional color arguments.",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/furkleindustries/colorful-logs.git"
+    "url": "git+https://github.com/furkleindustries/colorful-logging.git"
   },
   "keywords": [
     "log",
@@ -17,7 +17,7 @@
   "author": "furkle",
   "license": "GPL-3.0-only",
   "bugs": {
-    "url": "https://github.com/furkleindustries/colorful-logs/issues"
+    "url": "https://github.com/furkleindustries/colorful-logging/issues"
   },
-  "homepage": "https://github.com/furkleindustries/colorful-logs#readme"
+  "homepage": "https://github.com/furkleindustries/colorful-logging#readme"
 }
