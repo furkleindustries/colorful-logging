@@ -1,0 +1,23 @@
+{
+  "name": "colorful-logs",
+  "version": "1.0.0",
+  "description": "A simple logging module with pleasing default colors and optional color arguments.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/furkleindustries/colorful-logs.git"
+  },
+  "keywords": [
+    "log",
+    "color"
+  ],
+  "author": "furkle",
+  "license": "GPL-3.0-only",
+  "bugs": {
+    "url": "https://github.com/furkleindustries/colorful-logs/issues"
+  },
+  "homepage": "https://github.com/furkleindustries/colorful-logs#readme"
+}
