@@ -5,7 +5,7 @@ module.exports = function warn(value, colorFormatter, bgColorFormatter) {
   const logLine = processLogLine(
     value,
     colorFormatter || chalk.yellow,
-    bgColorFormatter,
+    bgColorFormatter || chalk.bgWhite,
   );
 
   console.warn(logLine);
