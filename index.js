@@ -1,11 +1,4 @@
-const error = require('./error');
-const log = require('./log');
-const processLogLine = require('./processLogLine');
-const warn = require('./warn');
+#!/usr/bin/env node
 
-module.exports = {
-  error,
-  log,
-  processLogLine,
-  warn,
-};
+require = require('esm')(module);
+module.exports = require('./main.js');
