@@ -1,8 +1,10 @@
 {
   "name": "colorful-logging",
-  "version": "1.1.4",
+  "version": "1.2.0",
   "description": "A simple logging module with pleasing default colors and optional color arguments.",
   "main": "index.js",
+  "module": "cjs.js",
+  "esnext": "main.js",
   "scripts": {
     "test": "jest"
   },
