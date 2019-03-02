@@ -1,11 +1,12 @@
-const error = require('./error');
-const log = require('./log');
-const processLogLine = require('./processLogLine');
-const warn = require('./warn');
-
-module.exports = {
+export {
   error,
+} from './error';
+export {
   log,
+} from './log';
+export {
   processLogLine,
+} from './processLogLine';
+export {
   warn,
-};
+} from './warn';

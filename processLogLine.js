@@ -1,4 +1,6 @@
-const isNode = require('./isNode');
+import {
+  isNode,
+} from './isNode';
 
 module.exports = function processLogLine(value, colorFormatter, bgColorFormatter) {
   let output = value;

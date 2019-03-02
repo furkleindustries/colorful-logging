@@ -1,10 +1,12 @@
-const chalk = require('chalk');
-const processLogLine = require('./processLogLine');
+import chalk from 'chalk';
+import {
+  processLogLine,
+} from './processLogLine';
 
-module.exports = function error(value, colorFormatter, bgColorFormatter) {
+export function error(value, colorFormatter, bgColorFormatter) {
   console.error(processLogLine(
     value,
     colorFormatter || chalk.red,
     bgColorFormatter,
   ));
-};
+}
