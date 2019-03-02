@@ -20,5 +20,8 @@
     "url": "https://github.com/furkleindustries/colorful-logging/issues"
   },
   "homepage": "https://github.com/furkleindustries/colorful-logging#readme",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^24.1.0"
+  }
 }
