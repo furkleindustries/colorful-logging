@@ -2,7 +2,7 @@ import {
   isNode,
 } from './isNode';
 
-module.exports = function processLogLine(value, colorFormatter, bgColorFormatter) {
+export function processLogLine(value, colorFormatter, bgColorFormatter) {
   let output = value;
   if (output && typeof output === 'object') {
     if (output instanceof Error) {
@@ -23,4 +23,4 @@ module.exports = function processLogLine(value, colorFormatter, bgColorFormatter
   }
 
   return output;
-};
+}
