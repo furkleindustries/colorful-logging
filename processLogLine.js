@@ -7,8 +7,6 @@ export function processLogLine(value, colorFormatter, bgColorFormatter) {
   if (output && typeof output === 'object') {
     if (output instanceof Error) {
       output = output.stack || output.message || value;
-    } else if (isNode()) {
-      output = require('util').inspect(value);
     } else {
       output = JSON.stringify(output, null, 2);
     }
