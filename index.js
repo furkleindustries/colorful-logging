@@ -1,4 +1,7 @@
 export {
+  createLogger,
+} from './createLogger';
+export {
   error,
 } from './error';
 export {

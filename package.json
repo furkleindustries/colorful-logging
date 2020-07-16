@@ -3,9 +3,7 @@
   "version": "1.4.0",
   "description": "A simple logging module with pleasing default colors and optional color arguments.",
   "module": "index.js",
-  "scripts": {
-    "test": "jest"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/furkleindustries/colorful-logging.git"
@@ -15,15 +13,13 @@
     "color"
   ],
   "author": "furkle",
-  "license": "CC0",
+  "license": "CC0-1.0",
   "bugs": {
     "url": "https://github.com/furkleindustries/colorful-logging/issues"
   },
   "homepage": "https://github.com/furkleindustries/colorful-logging#readme",
   "dependencies": {
-    "chalk": "^4.0.0"
+    "chalk": "^4.1.0"
   },
-  "devDependencies": {
-    "jest": "^25.3.0"
-  }
+  "devDependencies": {}
 }

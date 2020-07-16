@@ -2,4 +2,8 @@ import {
   Chalk,
 } from 'chalk';
 
-export function processLogLine(value: any, colorFormatter?: Chalk, bgColorFormatter?: Chalk): string;
+export const processLogLine: (
+  value: any,
+  colorFormatter?: Chalk,
+  bgColorFormatter?: Chalk,
+) => string;
