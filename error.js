@@ -6,7 +6,7 @@ import {
 export const error = (
   colorFormatter,
   bgColorFormatter,
-  ...logLines,
+  ...logLines
 ) => {
   logLines.forEach((value) => {
     console.error(processLogLine(

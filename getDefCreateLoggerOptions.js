@@ -12,20 +12,20 @@ import {
   warn,
 } from './warn';
 
-const isNode = isNode();
-const defaultWarnFormatter = isNode ? chalk.yellow : chalk.reset;
+const isInNode = isNode();
+const defaultWarnFormatter = isInNode ? chalk.yellow : chalk.reset;
 
-export const defaultCreateLoggerOptions = {
-  colorFormatting = {
+export const getDefCreateLoggerOptions = () => ({
+  colorFormatting: {
     error: chalk.red,
     log: undefined,
     warn: defaultWarnFormatter,
   },
 
-  levels,
-  loggerFunctions = {
+  levels: [ 'error', 'log', 'warn' ],
+  loggerFunctions: {
     error,
     log,
     warn,
   },
-};
+});

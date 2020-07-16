@@ -9,7 +9,7 @@ import {
 export const warn = (
   colorFormatter,
   bgColorFormatter,
-  ...logLines,
+  ...logLines
 ) => {
   logLines.forEach((value) => {
     console.warn(processLogLine(

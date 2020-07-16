@@ -5,5 +5,5 @@ import {
 export const error: (
   colorFormatter: Chalk,
   bgColorFormatter: Chalk,
-  ...logLines: any[],
+  ...logLines: any[]
 ) => void;

@@ -1,22 +1,23 @@
 import {
-  defaultCreateLoggerOptions,
-} from './defaultCreateLoggerOptions';
+  getDefCreateLoggerOptions,
+} from './getDefCreateLoggerOptions';
 
-export const createLogger = ({
-  colorFormatting = {
-    error: chalk.red,
-    log: undefined,
-    warn: defaultWarnFormatter,
-  },
+export const createLogger = (opts) => {
+  const {
+    colorFormatting,
+    levels,
+    loggerFunctions,
+  } = {
+    ...getDefCreateLoggerOptions(),
+    ...opts,
+  };
 
-  levels,
-  loggerFunctions = {
-    error,
-    log,
-    warn,
-  },
-} = defaultCreateLoggerOptions) => {
-  let levelsMap = {};
+  // None leaves this as-is.
+  let levelsMap = {
+    error: () => {},
+    log: () => {},
+    warn: () => {},
+  };
 
   if (levels) {
     const formattedLevels = Array.from(levels).map((level) => {
@@ -25,8 +26,7 @@ export const createLogger = ({
 
     for (const level of formattedLevels) {
       if (level === 'none') {
-        levelsMap = { none: 'none' };
-        break;
+        return levelsMap;
       } else if (level === 'error') {
         levelsMap.error = loggerFunctions.error;
       } else if (level === 'log') {
@@ -37,22 +37,22 @@ export const createLogger = ({
     }
   }
 
-  if ('none' in levelsMap) {
-    return levelsMap;
-  }
-
   const logTypes = [ 'error', 'log', 'warn' ];
-  for (logType of logTypes) {
+  for (const logType of logTypes) {
     if (logType in levelsMap) {
       levelsMap[logType] = levelsMap[logType].bind(
         null,
-        colorFormatting[logType][0],
+        colorFormatting[logType],
+        null,
       );
     } else {
       levelsMap[logType] = levelsMap[logType].bind(
         null,
-        colorFormatting[logType][1],
+        colorFormatting[logType],
+        null,
       );
     }
   }
+
+  return levelsMap;
 };

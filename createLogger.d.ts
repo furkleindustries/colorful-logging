@@ -12,7 +12,7 @@ import {
 export const createLogger: (options?: {
   colorFormatting: Record<
     LogTypes,
-    [ typeof Chalk, typeof Chalk ]
+    Chalk
   >;
 
   levels: LogTypes[],

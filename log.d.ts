@@ -5,5 +5,5 @@ import {
 export const log: (
   colorFormatter: Chalk,
   bgColorFormatter: Chalk,
-  ...logLines: any[],
+  ...logLines: any[]
 ) => void;
