@@ -1,15 +1,6 @@
 import {
-  error,
-} from './error';
-import {
-  log,
-} from './log';
-import {
-  warn,
-} from './warn';
-
-const isNode = isNode();
-const defaultWarnFormatter = isNode ? chalk.yellow : chalk.reset;
+  defaultCreateLoggerOptions,
+} from './defaultCreateLoggerOptions';
 
 export const createLogger = ({
   colorFormatting = {
@@ -24,7 +15,7 @@ export const createLogger = ({
     log,
     warn,
   },
-}) => {
+} = defaultCreateLoggerOptions) => {
   let levelsMap = {};
 
   if (levels) {

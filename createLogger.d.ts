@@ -9,16 +9,16 @@ import {
   LogTypes,
 } from './LogTypes';
 
-export const createLogger: (options: {
+export const createLogger: (options?: {
   colorFormatting: Record<
     LogTypes,
-    [ typeof Chalk, typeof Chalk ],
+    [ typeof Chalk, typeof Chalk ]
   >;
 
   levels: LogTypes[],
 
   loggerFunctions: Record<
     LogTypes,
-    LoggerBackendFunc,
+    LoggerBackendFunc
   >,
 }) => Record<LogTypes, LoggerFunc>;
