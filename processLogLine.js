@@ -1,7 +1,3 @@
-import {
-  isNode,
-} from './isNode';
-
 export function processLogLine(value, colorFormatter, bgColorFormatter) {
   let output = value;
   if (output && typeof output === 'object') {

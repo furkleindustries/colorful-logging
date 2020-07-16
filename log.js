@@ -2,10 +2,16 @@ import {
   processLogLine,
 } from './processLogLine';
 
-export function log(value, colorFormatter, bgColorFormatter) {
-  console.log(processLogLine(
-    value,
-    colorFormatter,
-    bgColorFormatter,
-  ));
-}
+export const log = (
+  colorFormatter,
+  bgColorFormatter,
+  ...logLines
+) => {
+  logLines.forEach((value) => {
+    console.log(processLogLine(
+      value,
+      colorFormatter,
+      bgColorFormatter,
+    ));
+  });
+};

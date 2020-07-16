@@ -3,10 +3,16 @@ import {
   processLogLine,
 } from './processLogLine';
 
-export function error(value, colorFormatter, bgColorFormatter) {
-  console.error(processLogLine(
-    value,
-    colorFormatter || chalk.red,
-    bgColorFormatter,
-  ));
-}
+export const error = (
+  colorFormatter,
+  bgColorFormatter,
+  ...logLines,
+) => {
+  logLines.forEach((value) => {
+    console.error(processLogLine(
+      value,
+      colorFormatter,
+      bgColorFormatter,
+    ));
+  });
+};

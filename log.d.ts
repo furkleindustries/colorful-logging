@@ -2,4 +2,8 @@ import {
   Chalk,
 } from 'chalk';
 
-export function log(value: any, colorFormatter?: Chalk, bgColorFormatter?: Chalk): void;
+export const log: (
+  colorFormatter: Chalk,
+  bgColorFormatter: Chalk,
+  ...logLines: any[],
+) => void;

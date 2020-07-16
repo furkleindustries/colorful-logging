@@ -1,10 +1,8 @@
 {
   "name": "colorful-logging",
-  "version": "1.2.4",
+  "version": "1.4.0",
   "description": "A simple logging module with pleasing default colors and optional color arguments.",
-  "main": "index.js",
-  "module": "cjs.js",
-  "esnext": "main.js",
+  "module": "index.js",
   "scripts": {
     "test": "jest"
   },
@@ -17,16 +15,15 @@
     "color"
   ],
   "author": "furkle",
-  "license": "GPL-3.0",
+  "license": "CC0",
   "bugs": {
     "url": "https://github.com/furkleindustries/colorful-logging/issues"
   },
   "homepage": "https://github.com/furkleindustries/colorful-logging#readme",
   "dependencies": {
-    "chalk": "^2.4.2",
-    "esm": "^3.2.22"
+    "chalk": "^4.0.0"
   },
   "devDependencies": {
-    "jest": "^24.1.0"
+    "jest": "^25.3.0"
   }
 }

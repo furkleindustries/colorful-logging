@@ -1,2 +1,12 @@
-require = require('esm')(module);
-module.exports = require('./main.js');
+export {
+  error,
+} from './error';
+export {
+  log,
+} from './log';
+export {
+  processLogLine,
+} from './processLogLine';
+export {
+  warn,
+} from './warn';

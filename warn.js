@@ -6,12 +6,16 @@ import {
   processLogLine,
 } from './processLogLine';
 
-export function warn(value, colorFormatter, bgColorFormatter) {
-  const logLine = processLogLine(
-    value,
-    colorFormatter || (isNode() ? chalk.yellow : chalk.reset),
-    bgColorFormatter,
-  );
-
-  console.warn(logLine);
-}
+export const warn = (
+  colorFormatter,
+  bgColorFormatter,
+  ...logLines,
+) => {
+  logLines.forEach((value) => {
+    console.warn(processLogLine(
+      value,
+      colorFormatter,
+      bgColorFormatter,
+    ));
+  });
+};
