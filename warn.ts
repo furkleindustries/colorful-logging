@@ -1,4 +1,4 @@
-import chalk from 'chalk';
+import { Chalk } from 'chalk';
 import {
   isNode,
 } from './isNode';
@@ -7,9 +7,9 @@ import {
 } from './processLogLine';
 
 export const warn = (
-  colorFormatter,
-  bgColorFormatter,
-  ...logLines
+  colorFormatter: Chalk,
+  bgColorFormatter: Chalk,
+  ...logLines: any[]
 ) => {
   logLines.forEach((value) => {
     console.warn(processLogLine(

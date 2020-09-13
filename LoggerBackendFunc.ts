@@ -2,8 +2,8 @@ import {
   Chalk,
 } from 'chalk';
 
-export const log: (
+export type LoggerBackendFunc = (
   colorFormatter: Chalk,
-  bgColorFormatter: Chalk,
+  bgFormatter: Chalk,
   ...logLines: any[]
 ) => void;

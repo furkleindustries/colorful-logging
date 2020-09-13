@@ -1,8 +1,30 @@
 import {
   getDefCreateLoggerOptions,
 } from './getDefCreateLoggerOptions';
+import { Chalk } from 'chalk';
+import {
+  LoggerBackendFunc,
+} from './LoggerBackendFunc';
+import {
+  LoggerFunc,
+} from './LoggerFunc';
+import {
+  LogTypes,
+} from './LogTypes';
 
-export const createLogger = (opts) => {
+export const createLogger = (opts?: {
+  colorFormatting: Record<
+    LogTypes,
+    Chalk
+  >;
+
+  levels: LogTypes[],
+
+  loggerFunctions: Record<
+    LogTypes,
+    LoggerBackendFunc
+  >,
+}): Record<LogTypes, LoggerFunc> => {
   const {
     colorFormatting,
     levels,
@@ -13,11 +35,11 @@ export const createLogger = (opts) => {
   };
 
   // None leaves this as-is.
-  let levelsMap = {
+  const levelsMap = {
     error: () => {},
     log: () => {},
     warn: () => {},
-  };
+  } as any;
 
   if (levels) {
     const formattedLevels = Array.from(levels).map((level) => {

@@ -1,15 +1,17 @@
-import chalk from 'chalk';
+import {
+  Chalk,
+} from 'chalk';
 import {
   processLogLine,
 } from './processLogLine';
 
-export const error = (
-  colorFormatter,
-  bgColorFormatter,
-  ...logLines
+export const log = (
+  colorFormatter: Chalk,
+  bgColorFormatter: Chalk,
+  ...logLines: any[]
 ) => {
   logLines.forEach((value) => {
-    console.error(processLogLine(
+    console.log(processLogLine(
       value,
       colorFormatter,
       bgColorFormatter,

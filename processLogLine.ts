@@ -1,4 +1,12 @@
-export function processLogLine(value, colorFormatter, bgColorFormatter) {
+import {
+  Chalk,
+} from "chalk";
+
+export function processLogLine(
+  value: any,
+  colorFormatter?: Chalk,
+  bgColorFormatter?: Chalk,
+) {
   let output = value;
   if (output && typeof output === 'object') {
     if (output instanceof Error) {

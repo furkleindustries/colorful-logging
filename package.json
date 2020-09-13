@@ -1,6 +1,6 @@
 {
   "name": "colorful-logging",
-  "version": "1.5.1",
+  "version": "1.7.0",
   "description": "A simple logging module with pleasing default colors and optional color arguments.",
   "main": "index.js",
   "module": "index.js",
